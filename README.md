@@ -1,19 +1,21 @@
-# 💳 ATM Simulation (C++)
+# ATM Simulation (C++)
 
-Simple **ATM system simulation** built using **C++**.
-Runs in the terminal and allows basic banking operations.
+A simple **ATM system simulation** built using **C++**.
+It runs in the terminal and allows basic banking operations.
 
-## ✨ Features
+## Features
 
-* 🔐 Password authentication
-* 🔁 3 login attempts
-* 💰 Check balance
-* ➕ Deposit money
-* ➖ Withdraw money
-* ⚠️ Prevents withdrawing more than available balance
-* 📋 Interactive ATM menu
+- Password authentication (demo password: `1234`)
+- 3 login attempts before the account is locked
+- Check balance (starting balance: $1000)
+- Deposit money
+- Withdraw money
+- Prevents withdrawing more than the available balance
+- Rejects zero or negative amounts
+- Handles non-numeric menu input
+- Interactive ATM menu
 
-## 🖥️ Example Menu
+## Example Menu
 
 ```
 ========== ATM MENU ==========
@@ -24,11 +26,27 @@ Runs in the terminal and allows basic banking operations.
 ==============================
 ```
 
+## How to Run
 
+Compile:
 
-## 🛠️ Built With
+```bash
+g++ ATM-simulation.cpp -o atm
+```
 
-* C++
-* iostream
-* Loops & Conditions
+Run:
 
+```bash
+./atm
+```
+
+## Built With
+
+- C++
+- iostream
+- Loops & conditions
+
+## Future Improvements
+
+- Store multiple accounts
+- Save the balance to a file between runs

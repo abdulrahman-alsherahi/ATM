@@ -4,6 +4,7 @@
 // ATM 
 
 #include <iostream>
+#include <limits>
 using namespace std;
 
 int password = 1234;
@@ -37,6 +38,14 @@ int main() {
                 showMenu();
                 cout << "Enter your choice: ";
                 cin >> choice;
+
+                // if the user types letters instead of a number, reset cin
+                if(cin.fail()) {
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    cout << "Please enter a number.\n";
+                    continue;
+                }
 
                 if(choice == 1) {
                     cout << "Your balance is: $" << balance << endl;
